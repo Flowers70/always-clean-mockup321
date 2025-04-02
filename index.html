@@ -19,6 +19,10 @@
                 --alternative-white: #FDFEFD; 
             }
 
+            button{
+                cursor: pointer;
+            }
+
             
             .grandstander-heading {
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -107,13 +111,18 @@
                 /* position: relative; */
                 overflow: hidden;
                 border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 /* background-image: url("Melinda.png"); */
             }
 
             .image-cropper img{
+                object-fit: cover;
                 display: inline;
                 margin: 0 auto;
-                height: 100%;
+                height: 50vh;
+                width: 50vh;
                 width: auto;
             }
 
@@ -123,7 +132,7 @@
             }
 
             .section img, iframe{
-                max-height: calc(100vh - 25px - 2em);
+                max-height: calc(100vh - 25px - 5px - 2em);
             }
 
             /* iframe{
@@ -154,6 +163,7 @@
             .decorative-line{
                 display: block;
                 margin: auto;
+                margin-bottom: 5px;
             }
 
             .quote-section{
@@ -193,6 +203,50 @@
                 align-items: center;
                 padding-left: 1em;
             }
+
+            .mySlides{
+                position: absolute;
+                transition: opacity 1s ease-in-out;
+            }
+/* 
+            .mySlides.active{
+                opacity: 1;
+            } */
+
+            .img-carousel{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                width: 100%;
+                height: calc(100vh - 30px - 2em);
+            }
+
+            .img-carousel img{
+                object-fit: contain;
+                height: calc(100vh - 30px - 2em);
+                width: 100vw;
+            }
+
+            .img-carousel button{
+                position: absolute;
+                font-size: 2em;
+                border: none;
+                background-color: transparent;
+                color: lightgray;
+            }
+
+            .img-carousel button:hover{
+                color: var(--alternative-black);
+            }
+
+            .img-carousel button:nth-child(0){
+                left: 10px;
+            }
+
+            .img-carousel button:nth-child(1){
+                right: 10px;
+            }
             
         </style>
     </head>
@@ -230,7 +284,11 @@
         <div class="section">
             <img src="./pictures/Decorative Line Blue.png" class="decorative-line">
             <div class="img-carousel">
-                <img src="./pictures/Placeholder_view_vector.svg.png">
+                <img class="mySlides" src="./pictures/Placeholder_view_vector.svg.png">
+                <img class="mySlides" src="./pictures/LogoA.jpg">
+                <img class="mySlides" src="./pictures/Female_portrait_placeholder_cropped.jpg">
+                <button style="left: 5px" onclick="carousel(-1)">&#10094;</button>
+                <button style="right: 5px" onclick="carousel(1)">&#10095;</button>
             </div>
         </div>
         <!-- Contact Me -->
@@ -244,4 +302,50 @@
             </div>
         </div>
     </body>
+    <script>
+
+        var slideIndex = 0;
+        carousel();
+
+        // Function to control carousel (auto and manual)
+        function carousel(click = 0) {
+            let slides = document.getElementsByClassName("mySlides");
+
+            // Hide all images
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.opacity = 0;
+                slides[i].style.display = "hidden";
+            }
+
+            if (click === 0) {
+                // Auto mode
+                slideIndex++;
+                if (slideIndex >= slides.length) { 
+                    slideIndex = 0; 
+                }
+            } else if (click === 1) {
+                // Forward click
+                slideIndex++;
+                if (slideIndex >= slides.length) { 
+                    slideIndex = 0; 
+                }
+            } else {
+                // Backward click
+                slideIndex--;
+                if (slideIndex < 0) { 
+                    slideIndex = slides.length - 1; 
+                }
+            }
+
+            // Show the correct image
+            slides[slideIndex].style.display = "block";
+            slides[slideIndex].style.opacity = 1;
+
+            // Auto-transition every 3 seconds if not manually clicked
+            if (click === 0) {
+                setTimeout(carousel, 4000);
+            }
+        }
+
+    </script>
 </html>
