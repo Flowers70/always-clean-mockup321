@@ -148,7 +148,7 @@
             }
 
             .contact-me img{
-                max-height: 5em;
+                max-height: 14em;
             }
 
             .contact-me h2{
@@ -247,6 +247,37 @@
             .img-carousel button:nth-child(1){
                 right: 10px;
             }
+
+            .card{
+                /* background-color: var(--alternative-white); */
+                background-image: url("pictures/Cleaning-Supplies-Card-Deco.png");
+                background-repeat: no-repeat;
+                /* background-size: ; */
+                background-size: 100% 100%;
+                /* background-position: center; */
+                color: var(--alternative-black);
+                width: 35em;
+                height: 20em;
+                display: grid;
+                grid-template-columns: 14em auto;
+                align-items: center;
+                justify-content: center;
+                margin: auto;
+            }
+
+            .email-phone{
+                text-align: left;
+                margin-bottom: 5px;
+            }
+
+            .social-media img{
+                height: 3.8em;
+                cursor: pointer;
+            }
+
+            .social-media a:nth-child(1){
+                margin-right: 2em;
+            }
             
         </style>
     </head>
@@ -295,11 +326,20 @@
         <div class="contact-me white-on-blue">
             <img src="./pictures/Decorative Line White.png" class="decorative-line">
             <h2>Contact Me</h2>
-            <img src="./pictures/LogoA.jpg">
-            <div class="email-phone">
-                <div>Email: mloukurtz19@gmail.com</div>
-                <div>Phone: 479-276-8305</div>
-            </div>
+            <div class="card">
+                <img src="./pictures/LogoB.png">
+                <div>
+                    <div class="email-phone">
+                        <div>Email: mloukurtz19@gmail.com</div>
+                        <div>Phone: 479-276-8305</div>
+                    </div>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/always_clean_1123?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="pictures/ig-instagram-icon.png"></a>
+                        <a href="https://www.facebook.com/profile.php?id=100092655759980" target="_blank"><img src="pictures/facebook-square-icon.png"></a>
+                    </div>
+                </div>
+               
+            </div>           
         </div>
     </body>
     <script>
