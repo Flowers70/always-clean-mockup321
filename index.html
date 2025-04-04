@@ -6,299 +6,30 @@
         <link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            /* Note: 1em = 16px */
-            :root{
-                --primary-blue: #669ED3;
-                --primary-pink: #FFAFF0;
-                --secondary-blue: #E2F1FF;
+        <link rel="stylesheet" href="Styles/style.css">
+        <link rel="stylesheet" href="Styles/header.css">
+        <link rel="stylesheet" href="Styles/about-me.css">
 
-                --primary-blue:#0A6F9F;
-                --alternative-green: #6EB91B;
-                --alternative-black: #302E2E;
-                --alternative-white: #FDFEFD; 
-            }
-
-            button{
-                cursor: pointer;
-            }
-
-            
-            .grandstander-heading {
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-weight: 300;
-            }
-
-            h1{
-                font-family: "Grandstander", cursive;
-                font-optical-sizing: auto;
-                font-weight: 300;
-                font-style: normal;
-                font-size: 2.5em;
-                margin: 0;
-            }
-
-
-            html, body{
-                margin: 0px;
-                padding: 0px;
-                background-color: var(--alternative-white);
-                color: var(--alternative-black);
-            }
-
-            div{
-                box-sizing: border-box;
-            }
-
-            header{
-                /* background-color: var(--primary-blue); */
-                color: var(--primary-pink);
-                height: 8em; /* 128px*/
-                width: 100%;
-                /* padding: .5em;
-                padding-left: 3em;
-                padding-left: 0; */
-
-                /* display: flex;
-                align-items: center; */
-
-                /* overflow: hidden; */
-
-                display: grid;
-                padding-left: 2.5em;
-                grid-template-columns: auto 1fr;
-                grid-template-rows: 100%;
-                box-sizing: border-box;
-            }
-
-            header div{
-                display: inline-block;
-            }
-
-            header img{
-                height: 100%;
-                /* margin-right: 1em;
-                display: inline; */
-            }
-
-            .white-on-blue{
-                background-color: var(--primary-blue);
-                color: white;
-            }
-
-            .about-me{
-                height: calc(100vh - 8em);
-                width: 100%;
-                display: flex;
-                align-items: center;
-            }
-
-            .section{
-                height: 100vh;
-                width: 100%;
-                text-align: center;
-                padding: 1em;
-                box-sizing: border-box;
-            }
-
-            .about-me img{
-                max-height: 100%;
-            }
-
-            .image-cropper{
-                width: 50vh;
-                height: 50vh;
-                /* position: relative; */
-                overflow: hidden;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                /* background-image: url("Melinda.png"); */
-            }
-
-            .image-cropper img{
-                object-fit: cover;
-                display: inline;
-                margin: 0 auto;
-                height: 50vh;
-                width: 50vh;
-                width: auto;
-            }
-
-            .about-me .content{
-                margin: 2em;
-                font-size: min(5vw, 5vh, 3rem);
-            }
-
-            .section img, iframe{
-                max-height: calc(100vh - 25px - 5px - 2em);
-            }
-
-            /* iframe{
-                background-color: var(--alternative-white);
-            } */
-
-            .contact-me{
-                width: 100%;
-                text-align: center;
-                padding: 1em;
-                box-sizing: border-box;
-                height: fit-content;
-            }
-
-            .contact-me img{
-                max-height: 14em;
-            }
-
-            .contact-me h2{
-                color: var(--primary-pink);
-                font-family: sans-serif;
-            }
-
-            .email-phone{
-                display: inline-block;
-            }
-
-            .decorative-line{
-                display: block;
-                margin: auto;
-                margin-bottom: 5px;
-            }
-
-            .quote-section{
-                display: grid;
-                grid-template-columns: 1fr 650px 1fr;
-                width: 100%;
-                height: 100%;
-            }
-
-            .about-img{
-                margin-right: 5em;
-            }
-            /* .section img{
-                text-align: center;
-            } */
-
-
-            .logo-background{
-                /* background-color: white; */
-                height: 100%;
-                text-align: right;
-                width: fit-content;
-                /* padding-right: 1em; */
-            }
-
-            .logo-background img{
-                height: 100%;
-                /* margin-right: 1em; */
-            }
-
-            .blue-header{
-                background-color: var(--primary-blue);
-                /* border-bottom-left-radius: 10px; */
-                width: 100%;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                padding-left: 1em;
-            }
-
-            .mySlides{
-                position: absolute;
-                transition: opacity 1s ease-in-out;
-            }
-/* 
-            .mySlides.active{
-                opacity: 1;
-            } */
-
-            .img-carousel{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                width: 100%;
-                height: calc(100vh - 30px - 2em);
-            }
-
-            .img-carousel img{
-                object-fit: contain;
-                height: calc(100vh - 30px - 2em);
-                width: 100%;
-            }
-
-            .img-carousel button{
-                position: absolute;
-                font-size: 2em;
-                border: none;
-                background-color: transparent;
-                color: lightgray;
-            }
-
-            .img-carousel button:hover{
-                color: var(--alternative-black);
-            }
-
-            .img-carousel button:nth-child(0){
-                left: 10px;
-            }
-
-            .img-carousel button:nth-child(1){
-                right: 10px;
-            }
-
-            .card{
-                /* background-color: var(--alternative-white); */
-                background-image: url("pictures/contact-card.png");
-                background-repeat: no-repeat;
-                /* background-size: ; */
-                background-size: 100% 100%;
-                /* background-position: center; */
-                color: var(--alternative-black);
-                width: 35em;
-                height: 20em;
-                display: grid;
-                grid-template-columns: 14em auto;
-                align-items: center;
-                justify-content: center;
-                margin: auto;
-            }
-
-            .email-phone{
-                text-align: left;
-                margin-bottom: 5px;
-            }
-
-            .social-media img{
-                height: 3.8em;
-                cursor: pointer;
-            }
-
-            .social-media a:nth-child(1){
-                margin-right: 2em;
-            }
-            
-        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <header class="grandstander-heading">
-            <img src="./pictures/LogoA.png">
             <!-- <div class="logo-background">
                 <img src="LogoA.png">
             </div> -->
             <div class="blue-header">
+                <img src="./pictures/LogoA2.png">
                 <h1>Always Clean</h1>
             </div>
         </header>
         <!-- About Me -->
-        <div class="about-me">
+        <div id="aboutMe" class="about-me bubbles">
             <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In purus libero, volutpat ut mi quis, porta tincidunt neque. Nulla at est in felis porta luctus. Vestibulum augue felis, gravida eget vestibulum vitae, facilisis eget erat. Mauris sed magna nibh. Donec commodo eros quam, at mollis enim aliquam non. Suspendisse mollis et neque at venenatis. Praesent laoreet porttitor mi, id luctus arcu mattis a. 
+                I want you to notice the difference in your home. Great cleaning creates an inviting home you can be proud of! I belive details, honesty, and precision make the difference. Balancing work, school, and life is difficult already and cleaning becomes a hassle. I am here to relieve you of that difficulty freeing you up to enjoy life! <br> A clean home = A happy home 
             </div>
             <div class="about-img">
                 <div class="image-cropper">
-                    <img src="./pictures/Female_portrait_placeholder_cropped.jpg">
+                    <img src="./pictures/Placeholder_view_vector.svg.png">
                 </div>
             </div>
         </div>
@@ -312,7 +43,7 @@
             </div>
         </div>
         <!-- Picture Carousel -->
-        <div class="section">
+        <div class="section bubbles">
             <img src="./pictures/Decorative Line Blue.png" class="decorative-line">
             <div class="img-carousel">
                 <img class="mySlides" src="./pictures/Placeholder_view_vector.svg.png">
@@ -342,50 +73,5 @@
             </div>           
         </div>
     </body>
-    <script>
-
-        var slideIndex = 0;
-        carousel();
-
-        // Function to control carousel (auto and manual)
-        function carousel(click = 0) {
-            let slides = document.getElementsByClassName("mySlides");
-
-            // Hide all images
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.opacity = 0;
-                slides[i].style.display = "hidden";
-            }
-
-            if (click === 0) {
-                // Auto mode
-                slideIndex++;
-                if (slideIndex >= slides.length) { 
-                    slideIndex = 0; 
-                }
-            } else if (click === 1) {
-                // Forward click
-                slideIndex++;
-                if (slideIndex >= slides.length) { 
-                    slideIndex = 0; 
-                }
-            } else {
-                // Backward click
-                slideIndex--;
-                if (slideIndex < 0) { 
-                    slideIndex = slides.length - 1; 
-                }
-            }
-
-            // Show the correct image
-            slides[slideIndex].style.display = "block";
-            slides[slideIndex].style.opacity = 1;
-
-            // Auto-transition every 3 seconds if not manually clicked
-            if (click === 0) {
-                setTimeout(carousel, 4000);
-            }
-        }
-
-    </script>
+    <script src="script.js"></script>
 </html>
