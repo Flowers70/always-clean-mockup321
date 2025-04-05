@@ -13,6 +13,10 @@
 
     --header-height: 5em; /* Was originally 8em */
     --remaining-space-total: calc(100vh - var(--header-height));
+    --section-spacing: 2rem;
+    --section-spacing-top: 1rem;
+    --decorative-line-height: 1.25rem;
+    --section-space-total: calc(100vh - var(--section-spacing) - var(--section-spacing-top) - var(--decorative-line-height) - 0.5rem);
 }
 
 button{
@@ -67,20 +71,23 @@ div{
 }
 
 .section{
-    min-height: fit-content;
+    height: 100vh;
     width: 100%;
     text-align: center;
-    padding: 2rem;
-    padding-top: 1rem;
+    padding: var(--section-spacing);
+    padding-top: var(--section-spacing-top);
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+
+    gap: 0.5rem;
 }
 
 .decorative-line{
     display: block;
     margin: auto;
     max-width: 100%;
+    height: var(--decorative-line-height);
     /* margin-bottom: 5px; */
 }
 
