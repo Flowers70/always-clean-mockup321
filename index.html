@@ -14,6 +14,9 @@
         <link rel="stylesheet" href="Styles/contact-me.css">
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            window.onload = function() {load_images_into_carousel()}
+        </script>
     </head>
     <body>
         <header>
@@ -31,7 +34,7 @@
  
             <div class="about-img">
                 <div class="image-cropper">
-                    <img src="./pictures/Placeholder_view_vector.svg.png">
+                    <img src="./pictures/Melinda2.jpg">
                 </div>
             </div>
         </div>
@@ -46,9 +49,12 @@
         <div class="section bubbles">
             <img src="./pictures/Decorative Line Blue.png" class="decorative-line">
             <div class="img-carousel">
-                <img class="mySlides" src="./pictures/Placeholder_view_vector.svg.png">
+                <div id="imgCarousel">
+
+                </div>
+                <!-- <img class="mySlides" src="./pictures/Placeholder_view_vector.svg.png">
                 <img class="mySlides" src="./pictures/LogoA.jpg">
-                <img class="mySlides" src="./pictures/Female_portrait_placeholder_cropped.jpg">
+                <img class="mySlides" src="./pictures/Female_portrait_placeholder_cropped.jpg"> -->
                 <button style="left: 5px" onclick="carousel(-1)">&#10094;</button>
                 <button style="right: 5px" onclick="carousel(1)">&#10095;</button>
             </div>

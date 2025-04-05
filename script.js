@@ -1,5 +1,9 @@
 var slideIndex = 0;
-carousel();
+var images_loaded = false;
+
+// if(images_loaded){
+//     carousel();
+// }
 
 // Function to control carousel (auto and manual)
 function carousel(click = 0) {
@@ -57,3 +61,20 @@ function carousel(click = 0) {
 // }
 
 // window.onload = setRandomBackground;
+
+function load_images_into_carousel(){
+    var imageCarousel = document.getElementById("imgCarousel");
+
+    for(var i = 1; i <= 4; i++){
+        console.log("Image:", i);
+        var image = document.createElement("img");
+        image.src = "./pictures/img-carousel/pic" + i + ".jpg";
+        image.className = "mySlides";
+        imageCarousel.appendChild(image);
+    }
+
+    images_loaded = true;
+    carousel();
+}
+
+// window.onload = function() {load_images_into_carousel()}

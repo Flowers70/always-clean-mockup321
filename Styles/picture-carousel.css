@@ -12,6 +12,12 @@
     height: var(--section-space-total);
 }
 
+.img-carousel div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .img-carousel img{
     object-fit: contain;
     /* height: calc(100vh - 30px - 2em); */
