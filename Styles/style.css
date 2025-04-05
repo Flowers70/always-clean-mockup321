@@ -16,7 +16,7 @@
     --section-spacing: 2rem;
     --section-spacing-top: 1rem;
     --decorative-line-height: 1.25rem;
-    --section-space-total: calc(100svh - var(--section-spacing) - var(--section-spacing-top) - var(--decorative-line-height) - 0.5rem);
+    --section-space-total: calc(100dvh - var(--section-spacing) - var(--section-spacing-top) - var(--decorative-line-height) - 0.5rem);
 }
 
 button{
