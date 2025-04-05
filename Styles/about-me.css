@@ -64,7 +64,7 @@
     }
 
     .about-me h2{
-        font-size: 1.75rem;
+        font-size: 1.75rem; /* Or it was 2rem */
     }
 
     .about-img{

@@ -12,7 +12,7 @@
     --alternative-white: #FDFEFD; 
 
     --header-height: 5em; /* Was originally 8em */
-    --remaining-space-total: calc(100vh - var(--header-height));
+    --remaining-space-total: calc(100dvh - var(--header-height));
     --section-spacing: 2rem;
     --section-spacing-top: 1rem;
     --decorative-line-height: 1.25rem;
@@ -71,7 +71,7 @@ div{
 }
 
 .section{
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     text-align: center;
     padding: var(--section-spacing);
