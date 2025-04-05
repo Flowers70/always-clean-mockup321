@@ -31,6 +31,8 @@ iframe{
 
     #form-embed{
         display: flex;
+        justify-content: center;
+        align-content: center;
     }
 
     .mobile{
