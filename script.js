@@ -45,23 +45,6 @@ function carousel(click = 0) {
     }
 }
 
-// var images = [
-//     "url('../pictures/Bubbles.png')",
-//     "url('../pictures/Bubbles2.png')",
-//     "url('../pictures/Bubbles3.png')"
-// ];
-
-// function setRandomBackground() {
-//     var randomIndex = Math.floor(Math.random() * images.length);
-//     var randomImage = images[randomIndex];
-//     console.log("Setting background");
-//     var aboutMe = document.getElementById("aboutMe");
-//     console.log(aboutMe);
-//     aboutMe.style.backgroundImage = randomImage;
-// }
-
-// window.onload = setRandomBackground;
-
 function load_images_into_carousel(){
     var imageCarousel = document.getElementById("imgCarousel");
 
@@ -76,5 +59,3 @@ function load_images_into_carousel(){
     images_loaded = true;
     carousel();
 }
-
-// window.onload = function() {load_images_into_carousel()}
