@@ -24,7 +24,7 @@ h1{
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    font-size: 2.5em;
+    font-size: 1.75em;
     margin: 0;
     color: var(--primary-pink);
 }
@@ -32,7 +32,8 @@ h1{
 h2{
     margin: 0;
     color: var(--primary-pink);
-    font-size: 1.75rem;
+    font-size: 1.375rem;
+    text-align: center;
 
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -66,7 +67,7 @@ div{
 }
 
 .section{
-    height: fit-content;
+    min-height: fit-content;
     width: 100%;
     text-align: center;
     padding: 2rem;
@@ -122,6 +123,15 @@ div{
 
 @media (min-width: 768px){
     html, body{
+        text-align: left;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    h2{
+        font-size: 1.75rem;
         text-align: left;
     }
 
