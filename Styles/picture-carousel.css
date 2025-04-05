@@ -9,13 +9,13 @@
     align-items: center;
     position: relative;
     width: 100%;
-    height: calc(100vh - 30px - 2em);
+    height: var(--section-space-total);
 }
 
 .img-carousel img{
     object-fit: contain;
     /* height: calc(100vh - 30px - 2em); */
-    height: calc(100vh - 25px - 2em - var(--header-height));
+    height: 100%;
     width: 100%;
 }
 
@@ -24,11 +24,11 @@
     font-size: 2em;
     border: none;
     background-color: transparent;
-    color: lightgray;
+    color: rgba(102, 158, 211, 0.25);
 }
 
 .img-carousel button:hover{
-    color: var(--alternative-black);
+    color: rgba(102, 158, 211, 0.75);
 }
 
 .img-carousel button:nth-child(0){
@@ -37,4 +37,10 @@
 
 .img-carousel button:nth-child(1){
     right: 10px;
+}
+
+@media (min-width: 779px){
+    .img-carousel{
+        height: calc(var(--section-space-total) - var(--header-height));
+    }
 }

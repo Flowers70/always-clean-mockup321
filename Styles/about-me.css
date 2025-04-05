@@ -1,5 +1,5 @@
 .about-me{
-    height: fit-content;
+    height: var(--remaining-space-total);
     width: 100%;
     display: flex;
     align-items: center;
@@ -59,7 +59,7 @@
 
 @media (min-width: 779px){
     .about-me{
-        height: var(--remaining-space-total);
+        /* height: var(--remaining-space-total); */
         padding-top: 2rem;
     }
 
