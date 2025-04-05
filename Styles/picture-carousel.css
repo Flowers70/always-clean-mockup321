@@ -1,0 +1,40 @@
+.mySlides{
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+}
+
+.img-carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 30px - 2em);
+}
+
+.img-carousel img{
+    object-fit: contain;
+    /* height: calc(100vh - 30px - 2em); */
+    height: calc(100vh - 25px - 2em - var(--header-height));
+    width: 100%;
+}
+
+.img-carousel button{
+    position: absolute;
+    font-size: 2em;
+    border: none;
+    background-color: transparent;
+    color: lightgray;
+}
+
+.img-carousel button:hover{
+    color: var(--alternative-black);
+}
+
+.img-carousel button:nth-child(0){
+    left: 10px;
+}
+
+.img-carousel button:nth-child(1){
+    right: 10px;
+}

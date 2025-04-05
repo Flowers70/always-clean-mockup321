@@ -1,61 +1,55 @@
 .about-me{
-    height: calc(100vh - var(--header-height));
+    height: var(--remaining-space-total);
     width: 100%;
     display: flex;
     align-items: center;
-    /* background-image: url('../pictures/Bubbles.png'), url('../pictures/Bubbles2.png'); */
-    /*background-attachment: fixed;*/ /* Creates Parallax Effect (scrolling effect) */
-    /* background-size: 28rem, 11rem;
-    position: relative;
-    z-index: 1; */
+    justify-content: center;
 }
 
-/* .about-img::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: linear-gradient(to top left, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, .8) 70%);
-    z-index: -1;
+.about-img{
+    max-width: 50vw;
+    height: 100%;
+    padding: 2rem;
+}
+
+/* .about-me img{
+    max-height: 100%;
 } */
 
-.about-me img{
-    max-height: 100%;
-}
-
 .image-cropper{
-    width: 50vh;
-    height: 50vh;
+    aspect-ratio: 1/1;
+    /* height: 50vh; */
+    height: 100%;
+    width: 100%;
+    /* height: auto; */
+    /* height: 50vh; */
     /* position: relative; */
     overflow: hidden;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-image: url("Melinda.png"); */
 }
 
 .image-cropper img{
     object-fit: cover;
     display: inline;
-    margin: 0 auto;
-    height: 50vh;
-    width: 50vh;
-    width: auto;
+    height: 100%;
+    width: 100%;
+    /* margin: 0 auto; */
+    /* height: 50vh;
+    width: 50vh; */
+    /* width: auto; */
 }
 
 .about-me .content{
     /* margin: 2em; */
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+    letter-spacing: -0.1px;
     line-height: 2;
     display: flex;
+    flex-direction: column;
+    max-width: 45rem;
     justify-content: space-between;
     padding: 4rem;
-    /* background-color: var(--alternative-white); */
-}
-
-.about-img{
-    margin-right: 5em;
 }

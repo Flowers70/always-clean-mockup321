@@ -12,16 +12,11 @@
     --alternative-white: #FDFEFD; 
 
     --header-height: 5em; /* Was originally 8em */
+    --remaining-space-total: calc(100vh - var(--header-height));
 }
 
 button{
     cursor: pointer;
-}
-
-
-.grandstander-heading {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 300;
 }
 
 h1{
@@ -31,21 +26,36 @@ h1{
     font-style: normal;
     font-size: 2.5em;
     margin: 0;
+    color: var(--primary-pink);
 }
 
+h2{
+    margin: 0;
+    color: var(--primary-pink);
+    font-size: 2rem;
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
 
 html, body{
     margin: 0px;
     padding: 0px;
     background-color: var(--alternative-white);
     color: var(--alternative-black);
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    
+    scrollbar-color: transparent;
 }
 
 div{
     box-sizing: border-box;
 }
-
-
 
 .white-on-blue{
     background-color: var(--primary-blue);
@@ -56,136 +66,22 @@ div{
     height: 100vh;
     width: 100%;
     text-align: center;
-    padding: 1em;
+    padding: 2rem;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
-}
-
-.section img, iframe{
-    max-height: calc(100vh - 25px - 5px - 2em);
-}
-
-/* iframe{
-    background-color: var(--alternative-white);
-} */
-
-.contact-me{
-    width: 100%;
-    text-align: center;
-    padding: 1em;
-    box-sizing: border-box;
-    height: fit-content;
-}
-
-.contact-me img{
-    max-height: 14em;
-}
-
-.contact-me h2{
-    color: var(--second-pink);
-    font-family: sans-serif;
-}
-
-.email-phone{
-    display: inline-block;
 }
 
 .decorative-line{
     display: block;
     margin: auto;
-    margin-bottom: 5px;
-}
-
-.quote-section{
-    display: grid;
-    grid-template-columns: 1fr 650px 1fr;
-    width: 100%;
-    height: 100%;
-}
-
-/* .section img{
-    text-align: center;
-} */
-
-.mySlides{
-    position: absolute;
-    transition: opacity 1s ease-in-out;
-}
-/* 
-.mySlides.active{
-    opacity: 1;
-} */
-
-.img-carousel{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 30px - 2em);
-}
-
-.img-carousel img{
-    object-fit: contain;
-    height: calc(100vh - 30px - 2em);
-    width: 100%;
-}
-
-.img-carousel button{
-    position: absolute;
-    font-size: 2em;
-    border: none;
-    background-color: transparent;
-    color: lightgray;
-}
-
-.img-carousel button:hover{
-    color: var(--alternative-black);
-}
-
-.img-carousel button:nth-child(0){
-    left: 10px;
-}
-
-.img-carousel button:nth-child(1){
-    right: 10px;
-}
-
-.card{
-    /* background-color: var(--alternative-white); */
-    background-image: url("../pictures/contact-card.png");
-    background-repeat: no-repeat;
-    /* background-size: ; */
-    background-size: 100% 100%;
-    /* background-position: center; */
-    color: var(--alternative-black);
-    width: 35em;
-    height: 20em;
-    display: grid;
-    grid-template-columns: 14em auto;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
-
-.email-phone{
-    text-align: left;
-    margin-bottom: 5px;
-}
-
-.social-media img{
-    height: 3.8em;
-    cursor: pointer;
-}
-
-.social-media a:nth-child(1){
-    margin-right: 2em;
+    /* margin-bottom: 5px; */
 }
 
 .bubbles{
     background-image: url('../pictures/Bubbles.png'), url('../pictures/Bubbles2.png');
     background-attachment: fixed; /* Creates Parallax Effect (scrolling effect) */
-    /* background-repeat: no-repeat repeat; */
-    /* background-position:auto top left; */
     background-size: 28rem, 11rem;
     position: relative;
     z-index: 1;
@@ -211,11 +107,11 @@ div{
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: var(--second-pink);
+    background-color: var(--primary-pink);
     border-radius: 0.4rem;
 }
 
 ::-webkit-scrollbar-thumb:hover{
-    background-color: var(--primary-pink);
+    /* background-color: var(--primary-pink); */
     cursor: pointer;
 }
