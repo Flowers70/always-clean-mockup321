@@ -2,7 +2,6 @@ header{
     position: sticky;
     top: 0;
     /* background-color: var(--primary-blue); */
-    color: var(--primary-pink);
     height: var(--header-height); 
     width: 100%;
     display: flex;
