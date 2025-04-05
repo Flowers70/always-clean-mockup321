@@ -12,7 +12,7 @@
     --alternative-white: #FDFEFD; 
 
     --header-height: 5em; /* Was originally 8em */
-    --remaining-space-total: calc(100dvh - var(--header-height));
+    --remaining-space-total: calc(100svh - var(--header-height));
     --section-spacing: 2rem;
     --section-spacing-top: 1rem;
     --decorative-line-height: 1.25rem;
