@@ -16,6 +16,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script>
             window.onload = function() {load_images_into_carousel()}
+
+            var formOpen = false;
+
+            function openForm(){
+                var image_h2 = document.getElementById("quote-button-text");
+                console.log("Current button:", image_h2.innerHTML);
+                if(formOpen){
+                    console.log("Closing form");
+                    document.getElementById("form-embed").style.display = "none";
+                    formOpen = false;
+                    image_h2.innerHTML = "Request a Quote";
+                }else{
+                    console.log("Opening form");
+                    document.getElementById("form-embed").style.display = "flex";
+                    formOpen = true;
+                    image_h2.innerHTML = "Close the Form";
+                }
+            }
         </script>
     </head>
     <body>
@@ -42,8 +60,13 @@
         <div class="section white-on-blue">
             <img src="./pictures/Decorative Line White.png" class="decorative-line">
             <div class="quote-section">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfcd4MyDHgruzfZ0ep2tRPyBwr0MTAISrGVsVnmhZLC6G1wJg/viewform?embedded=true" width="640" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-            </div>
+                <div class="mobile">
+                    <button onclick="openForm()"><h2 id="quote-button-text">Request a Quote</h2></button>
+                </div>
+                <div id="form-embed">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfcd4MyDHgruzfZ0ep2tRPyBwr0MTAISrGVsVnmhZLC6G1wJg/viewform?embedded=true" width="640" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
+            </div>          
         </div>
         <!-- Picture Carousel -->
         <div class="section bubbles">

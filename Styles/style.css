@@ -21,6 +21,11 @@
 
 button{
     cursor: pointer;
+    border: none;
+    background-color: var(--alternative-white);
+
+    padding: 1rem;
+    border-radius: 0.25rem;
 }
 
 h1{
